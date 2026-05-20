@@ -174,6 +174,17 @@ const meta: DemoMeta[] = [
 
 const components: Record<string, LazyExoticComponent<ComponentType<unknown>>> = {
   'mediterranean-sun': lazy(() => import('./mediterranean-sun')),
+  'alpine-serenity': lazy(() => import('./alpine-serenity')),
+  'muji-stillness': lazy(() => import('./muji-stillness')),
+  'maldives-whitesand': lazy(() => import('./maldives-whitesand')),
+  'manhattan-editorial': lazy(() => import('./manhattan-editorial')),
+  'tsutaya-archive': lazy(() => import('./tsutaya-archive')),
+  'bali-tropical': lazy(() => import('./bali-tropical')),
+  'nordic-luxe': lazy(() => import('./nordic-luxe')),
+  'hoshinoya-onsen': lazy(() => import('./hoshinoya-onsen')),
+  'aman-eastern': lazy(() => import('./aman-eastern')),
+  'family-storybook': lazy(() => import('./family-storybook')),
+  'hand-illustrated': lazy(() => import('./hand-illustrated')),
 };
 
 export const demos: DemoEntry[] = meta
