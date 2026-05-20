@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* 紅線：全面禁用斜體 */
+em, i, cite, dfn, address {
+  font-style: normal;
+}
+
+/* 紅線：禁用 ul/ol 內建圓點 / 數字、需要列表用 component 自製方塊 / 線條 marker */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
