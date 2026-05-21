@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import { demoMeta, PUBLISHED_COUNT, TOTAL_PLANNED } from '@/demos/registry';
+import { demoMeta, demos, PUBLISHED_COUNT, TOTAL_PLANNED } from '@/demos/registry';
+
+const publishedSlugs = new Set(demos.map((d) => d.slug));
 
 export default function HomePage() {
   return (
@@ -25,7 +27,7 @@ export default function HomePage() {
 
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-200">
         {demoMeta.slice(0, TOTAL_PLANNED).map((demo) => {
-          const isPublished = ['mediterranean-sun'].includes(demo.slug);
+          const isPublished = publishedSlugs.has(demo.slug);
           const card = (
             <article className="group bg-white p-8 h-full flex flex-col transition-colors hover:bg-neutral-50">
               <div className="flex items-baseline justify-between mb-6">
